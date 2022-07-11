@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto Condensed', sans-serif;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+nav, main, aside, footer{
+	padding: 20px;
+	color: white;
+	font-weight: 800;
+}
+
+nav{
+	background-color: #A29C9C;
+	grid-area: nav;
+}
+
+main{
+	background-color: #423E3E;
+	grid-area: main;
+}
+
+aside{
+	background-color: #93E78A;
+     grid-area: links;
+}
+
+footer{
+	background-color: #325835;
+	grid-area: pie;
+}
+
+body{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 10vh 60vh 25vh 5vh;
+	grid-template-areas: 
+	"nav"
+	"main"
+	"links"
+	"pie";
+}
+
+@media only screen and (min-width:768px) {
+	body{
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 10vh 85vh 5vh;
+	grid-template-areas:"nav nav nav"
+	"main main links"
+	"pie pie pie";}
+	footer{
+		background-color: deeppink;
+	}
+
+	svg{
+		fill: deeppink;
+		width: 500px;
+		height: auto;
+	}
+}
+
+@media  only screen and (min-width:1024px){
+	body{
+		column-gap: 20px;
+	}
+}
